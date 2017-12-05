@@ -7,8 +7,8 @@ var keyfound = false;
 // function keycheck
 
 function keycheck () {
-    lvl13();
     keyfound = true;
+    lvl13();
     alert('Je hebt de sleutel opgepakt');
 }
 
