@@ -51,14 +51,24 @@ function gameover4 () {
     button2.style.display = 'none';
 }
 //  lvls
+window.onload = function start () {
+    content.innerHTML = 'Je bent op vakantie gegaan naar turkije en je besluit om een boot te huren en een dagje te gaan varen';
+    title.innerHTML = 'Start game';
+    image.src = 'img/turkije.jpg';
+    console.log('Start game');
+    button1.innerHTML = 'Start Game';
+    button1.setAttribute ('onclick','intro()');
+    button2.style.display = 'none';
+}
 
-window.onload = function intro () {
-    content.innerHTML = 'Je bent in de vakantie een stukje gaan varen in turkije Je had het zo leuk dat je niet door had dat je zo ver van de kust af bent gekomen dat je de kust niet eens meer kan zien. Oftewel je bent verdwaald. En je energie begint ook aardig op te raken je hebt totaal geen kracht meer om te roeien. Je denkt bij jezelf wat moet ik nu doen ?';
+function intro () {
+    content.innerHTML = 'Je bent een stukje gaan varen in turkije Je had het zo leuk dat je niet door had dat je zo ver van de kust af bent gekomen dat je de kust niet eens meer kan zien. Oftewel je bent verdwaald. En je energie begint ook aardig op te raken je hebt totaal geen kracht meer om te roeien. Je denkt bij jezelf wat moet ik nu doen ?';
     title.innerHTML = "Adventure game";
     image.src = "img/boot.jpg";
     console.log('Adventure game');
     button1.innerHTML = 'Probeer het land te zoeken met het laatste beetje energie die je nog hebt.';
     button1.setAttribute ('onclick', 'lvl2()')
+    button2.style.display = 'block';
     button2.innerHTML = 'Wachten tot er misschien een andere boot voorbij komt varen.';
     button2.setAttribute ('onclick', 'lvl3()')
 }
